@@ -20,3 +20,7 @@
 
 <p>&nbsp;</p>
 <strong>Follow up:</strong> Could you minimize the total number of operations done?</div>
+
+<p>&nbsp;</p>
+<b>Solution:</b>
+two forward-moving pointers as a dest & src, skip and count zeros to add them at the end.
