@@ -18,4 +18,8 @@
 	<li>There is <strong>at least one</strong> word in <code>s</code>.</li>
 	<li>All the words in <code>s</code> are separated by a single space.</li>
 </ul>
+	<p>&nbsp;</p>
+	<b>Solution:</b>
+	reverse the order of words in the sentence then reverse the letters, or vice versa.
+	
 </div>
