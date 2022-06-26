@@ -17,7 +17,7 @@ public:
         int n2=s2.size();
         int st = 0;
         int end = 0;
-        for(int i=0; i<n1; i++) freq1[s1[i]-'a']++;
+        for (auto c : s1) freq1[c - 'a']++;
         
         while(end < n2)
         {
