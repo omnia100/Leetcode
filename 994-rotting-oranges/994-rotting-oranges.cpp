@@ -4,7 +4,6 @@ public:
         int minute = 0;
         int dir[5] = {0,1,0,-1,0};
         queue<pair<int,int>> q;
-        queue<pair<int,int>> qtmp;
         int n=grid.size();
         int m=grid[0].size();
         
@@ -13,17 +12,17 @@ public:
             for(int j=0;j<m;j++)
             {
                 if(grid[i][j]==2){
-                    qtmp.push({i,j});
+                    q.push({i,j});
                 }
             }
         }
         
         
-        while(!qtmp.empty()){
-            q = qtmp;
-            qtmp = queue<pair<int,int>>();
+        while(!q.empty()){
+            int sz = q.size();
+            
             bool f=false;
-            while(!q.empty())
+            while(sz--)
             {
                 pair<int,int> curr=q.front();
                 q.pop();
@@ -37,7 +36,7 @@ public:
                     if(grid[nr][nc]==1)
                     {
                         grid[nr][nc]=2;
-                        qtmp.push({nr,nc});
+                        q.push({nr,nc});
                         f=true;
                     }
 
