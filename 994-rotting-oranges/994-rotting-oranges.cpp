@@ -20,8 +20,6 @@ public:
         
         while(!q.empty()){
             int sz = q.size();
-            
-            bool f=false;
             while(sz--)
             {
                 pair<int,int> curr=q.front();
@@ -37,13 +35,12 @@ public:
                     {
                         grid[nr][nc]=2;
                         q.push({nr,nc});
-                        f=true;
                     }
 
                 }
 
             }
-            if(f) minute++;
+           minute++;
             
         }
         
@@ -57,7 +54,7 @@ public:
             }
         }
         
-        return minute;
+        return minute==0? 0: minute-1;
         
     }
 };
